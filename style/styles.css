@@ -1,0 +1,58 @@
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(45, 167, 254);
+}
+
+
+
+.parent{
+    color: rgb(57, 162, 254);
+    font-size: large;
+    font-weight: bold;
+    background-color: brown;
+    position:relative;
+    top:20px;
+    width: 7cm;
+    float: right;
+    border: 1px saddlebrown;
+    border-radius: 5px;
+    right: 550px;
+    z-index: 2;
+
+}
+
+.child{
+    color: blueviolet;
+    font-size: xx-large;
+    background-color: rgb(253, 159, 44);
+    top: 400px;
+    width:7cm;
+    position:relative;
+    border: 1px seagreen;
+    border-radius: 6px;
+    z-index: 5;
+}
+
+.pseudo{
+    height: 140px;
+    width:7cm;
+    padding: 20px;
+}
+
+a:link{
+    color: royalblue;
+    font-weight: bold;
+}
+
+a:visited{
+    color: violet;
+}
+
+a:hover{
+    color: black;
+}
+
+.pseudo:hover{
+    background-color: purple;
+}

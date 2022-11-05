@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Print</title>
+    </head>
+
+    <body style="background-color: rgb(130, 3, 137);">
+        <center><a href="booking.html">Back to Booking page</a></center>
+
+        <center>
+
+        <video width="1000" height="500"  loop control autoplay muted>
+
+            <source src="C:\Users\finu.n\Desktop\ILP\Flight Service\ftms video\airplane1.mp4" type="video/mp4">
+            <source src="C:\Users\finu.n\Desktop\ILP\Flight Service\ftms video\airplane1.mp4" type="video/ogg">
+            
+        </video>
+        
+        <h2>Submitted Details:</h2>
+
+        <input type="button" name="btnShow" value="Show Data" onclick="showData();"/>
+
+        Welcome <label id="lblFirstName"></label>
+        <span id="fullName"></span> ! Your address is <span id ="address"></span>
+
+        </center>
+
+        <script>
+            function showData(){
+                var data=JSON.parse(localStorage.getItem('formData'))
+                console.log(data.firstName);
+                var firstName = data.firstName;
+                var lastName = data.lastName;
+                var address = data.address;
+                console.log(firstName);
+                document.getElementById('fullName').innerHTML= data.firstName+" "+data.lastName;
+                document.getElementById('address').innerHTML= data.address;
+                // document.getElementById('atalblFirstName').innerHTML= firstName;
+            }
+        </script>
+    </body>
+</html>

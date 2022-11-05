@@ -3,8 +3,206 @@
         <title>Booking page</title>
     </head>
 
-    <body>
+    <body style="background-color: rgb(6, 151, 229);">
         <center><a href="index.html">Back to home page</a></center>
+        <center>
+        <img src="https://img3.exportersindia.com/product_images/bc-full/dir_172/5131407/air-ticket-booking-services-1503653633-3247940.jpeg" width="1200px"> 
+        
+        <form action="print.html" method="post">
+
+
+        <table cellspacing="3" cellpadding="2" >
+
+            <tr>
+                <td>
+                    <label for="origin">Origin:</label>
+                </td>
+
+                <td>
+                <input type="text" id="origin" placeholder="Enter Origin"/>
+                </td>
+            </tr>  
+
+        
+            <tr>
+                <td>
+                    <label for="destination">Destination:</label>
+                </td>
+
+                <td>
+                    <input type="text" id="destination" placeholder="Enter Destination"/>
+                </td>
+            </tr>
+
+        
+            <tr>
+                <td>
+                    <label for="date">Date of Journey:</label>
+                </td>
+
+                <td>
+                    <input type="date" id="date" placeholder="Enter Date of Travel"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="title">Title</label>
+                </td>
+
+                <td>
+                    <select id="title" name="title">
+                        <option value="1">Mr.</option>
+                        <option value="2">Mrs.</option>
+                        <option value="3">Ms.</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="firstName">First Name:</label>
+                </td>
+
+                <td>
+                    <input type="text" id="firstName" placeholder="Enter First Name of the Passenger"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="lastName">Last Name:</label>
+                </td>
+
+                <td>
+                    <input type="text" id="lastName" placeholder="Enter Last Name of the Passenger"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="dob">Gender:</label>
+                </td>
+                <td>
+                <input type="radio" id="male" name="gender" value="1"/>Male
+                <input type="radio" id="female" name="gender" value="2">Female
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="phoneNumber">Phone Number:</label>
+                </td>
+
+                <td>
+                    <input type="number" id="phoneNumber" placeholder="Enter Your Phone Number"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="email">Email:</label>
+                </td>
+
+                <td>
+                    <input type="email" id="email" placeholder="Enter your email Address"/>
+                </td>
+            </tr>
+
+        
+            <tr>
+                <td>
+                    <label for="address">Address:</label>
+                </td>
+
+                <td>
+                    <textarea id="address" name="address" placeholder="Enter your Address" rows="6" cols="20" ></textarea>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="passport">Passport:</label>
+                </td>
+
+                <td>
+                    <input type="file" name=""fileupload" accept="ïmage/*"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="communication">Communication Preference:</label>
+                </td>
+
+                <td>
+                <input type="radio" id="email" name="communication" value="1"/>Email
+                <input type="radio" id="sms" name="communication" value="2">SMS
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox"> I agree to the <a href="">Terms and Conditions</a> of the website.</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" onclick="saveData();" id="Submit" name="Submit" value="Submit"/>
+                </td>
+
+                <td>
+                    <input type="Reset" id="Reset" name="Reset" value="Reset"/>
+                </td>
+            </tr>
+
+        
+        </table>
+
+        
+
+        </form>
+        </center>
+        <script>
+            function saveData(){
+                var origin = document.getElementById('origin').value;
+                var destination = document.getElementById('destination').value;
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var phoneNumber = document.getElementById('phoneNumber').value;
+                var email = document.getElementById('email').value;
+                var address = document.getElementById('address').value;
+                var Gender = document.getElementsByName('gender').value;
+
+                alert('Origin ' +origin);
+
+                var formData = {
+                    firstName,lastName,address
+                }
+
+                // formData.origin= origin;
+                // formData.destination= destination;
+                // formData.name= name;
+                // formData.phoneNumber= phoneNumber;
+                // formData.email= email;
+                // formData.address= address;
+
+        console.log(formData);
+                // localStorage.setItem('origin',origin);
+                // localStorage.setItem('destination',destination);
+                // localStorage.setItem('name',name);
+                // localStorage.setItem('phoneNumber',phoneNumber);
+                // localStorage.setItem('email',email);
+                localStorage.setItem('formData',JSON.stringify(formData));
+                // localStorage.setItem('origin',origin);
+
+
+            }
+        </script>
+        
     </body>
 
 </html>
